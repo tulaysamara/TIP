@@ -6,27 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    </link>
 </head>
 
 <body>
-    <div id="cal-body">
+    <div id="container">
+        <div id="cal-body">
+            <h1> Tip Calculator </h1>
 
-        <h3> Bill Amount </h3>
-        $ <input type="text" class="text-area" placeholder="Enter bill amount">
 
-        <h3> Tip amount </h3>
-        <label for="tip-amount"> Please select a tip amount</label>
-        <select id="tip-amount" name="tip-amount">
-            <option value="10%"> 10% </option>
-            <option value="15%"> 15% </option>
-            <option value="20%"> 20% </option>
-        </select>
+            <h3> Bill Amount </h3>
+            $ <input type="text" class="textArea" id="billAmount" placeholder="Enter bill amount">
+            <br><br>
+            <h3> Tip amount </h3>
+            <label for="tip-amount"> Please select a tip amount</label>
+            <select id="tip-amount" name="tip-amount">
+                <option value="0.10"> 10% </option>
+                <option value="0.15"> 15% </option>
+                <option value="0.20"> 20% </option>
+            </select>
+            <br><br>
+            <h3> Number of guests</h3>
+            <input type="text" class="textArea" id="guestNum" placeholder="Enter number of guests">
+            <br><br><br>
+            <div id="bttn">
+                <button type="submit" id="button"> Calculate </button>
+            </div>
+            <div class="totalContainer">
+                <div id="personTotal">
+                    $ <span id="total"> 0.00 </span>
+                </div>
 
-        <h3> Number of guests</h3>
-        <input type="text" class="text-area" placeholder="Enter number of guests">
-        <br><br>
-        <button type="submit" id="button"> Calculate </button>
+            </div>
+        </div>
     </div>
+
+    <script src="main.js"> </script>
 </body>
 
 </html>
